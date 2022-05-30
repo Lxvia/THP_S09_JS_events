@@ -1,5 +1,5 @@
 <h2>Téléchargement</h2><br>
-git clone : [git@github.com:Lxvia/THP_S09_JS_events.git](https://github.com/Lxvia/THP_S09_JS_events)
+git clone : [git@github.com:Lxvia/THP_S09_JS_events.git]
 <br><br>
 <h2>🐥 Auteure 🐥</h2><br>
 Olivia R : https://github.com/Lxvia
