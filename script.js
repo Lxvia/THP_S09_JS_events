@@ -56,6 +56,64 @@ header.addEventListener('dblclick', function(){
 //6
 
 var view = document.querySelectorAll('.btn-success');
-var cards = document.querySelectorAll('.card-text');
+var text = document.querySelectorAll('.card-text');
 var img = document.querySelectorAll('.card-img-top');
 
+for (let i = 0; i < view.length; i++) {
+    view[i].addEventListener('mouseover', function(){
+    if (text[i].style.display !== 'none'){
+        img[i].style.width = '20%';
+        text[i].style.display = 'none';
+    } else {
+        img[i].style.width = '100%';
+        text[i].style.display = '';
+    }
+  })
+};
+
+//7
+
+var parent = document.querySelector('.album .row');
+var btn = document.querySelector('.btn-secondary');
+
+btn.addEventListener('click', function(e){
+    e.preventDefault();
+    parent.insertBefore(parent.lastElementChild, parent.firstElementChild);
+});
+
+//8
+
+var btn2 = document.querySelector('.btn-primary');
+
+btn2.removeAttribute('href');
+
+btn2.addEventListener('click', function(e){
+    e.preventDefault();
+    parent.insertBefore(parent.firstElementChild, parent.lastElementChild.nextSibling);
+});
+
+//9
+
+window.addEventListener('keypress', function(e){
+    if (this.window.getSelection().anchorNode !==  null) {
+        if ('KeyK' && window.getSelection().anchorNode.data === 'JS & Events') {
+            switch (e.code) {
+                case 'KeyQ':
+                    document.body.className = ''
+                    document.body.classList.add('col-md-4');
+                    break
+                case 'KeyY':
+                    document.body.className = ''
+                    document.body.classList.add('offset-4', 'col-md-4')
+                    break
+                case 'KeyP':
+                    document.body.className = ''
+                    document.body.classList.add('offset-8', 'col-md-4')
+                    break
+                case 'KeyB':
+                    document.body.className = ''
+                    break
+            }
+        }
+    }
+});
